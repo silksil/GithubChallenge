@@ -2,7 +2,6 @@
 - App has 2 main functionalities:
 1. Displays the most popular repositories based on programming language.
 2. Allows you to fill in 2 Github usernames and checks who has a better Github score based an the users's amount of followers, amount of repositories etc.
-- Build while following the [React course](https://tylermcginnis.com/) of Tyler McGinnis.
 - Project is build on [this boilerplate](https://github.com/StephenGrider/ReduxSimpleStarter).
 - Initial project was written only in React. After gaining experience in Redux, I refactored so it also includes Redux.
 - Notes in relation to this project can be found throughout my [React cheatsheet folder](https://github.com/silksil/best-practices-cheatsheets/tree/master/client/react).

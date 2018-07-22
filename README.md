@@ -12,6 +12,6 @@
 Clone or download and:
 ```
 > npm install
-> Create in include your Github client-id and secret-id in `src/actions/action_battle`.
+> Create and include your Github client-id and secret-id in `src/actions/action_battle`.
 > npm start
 ```

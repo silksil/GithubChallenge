@@ -19,7 +19,7 @@ class PlayerInput extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault(); // you don't want it to redirect to a different page
+    event.preventDefault();
 
     this.props.onSubmit( // calling the function onSubmit in the battle component
       this.props.id,

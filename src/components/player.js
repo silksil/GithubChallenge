@@ -10,7 +10,7 @@ export default function Player(props) {
       <h3 style={{textAlign: 'center'}}>Score: {props.score}</h3>
       <Profile info={props.profile} />
     </div>
-  )
+  );
 }
 
 Player.propTypes = {

@@ -28,7 +28,7 @@ class Battle extends Component {
     this.setState( () =>  {
       const newState = {};
       newState[id + 'Name'] = username;
-      newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200'
+      newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
       return newState;
     });
   }
@@ -50,57 +50,53 @@ class Battle extends Component {
     const playerTwoImage = this.state.playerTwoImage;
 
     return (
-			<div>
-				<div className='row'>
-					{!this.state.playerOneName &&  // if playerOneName is empty ( === false), then do this
-						<PlayerInput
-							id='playerOne'
-							label='Player One'
-							onSubmit={this.handleSubmit}
-						/>}
-
-					{playerOneImage !== null &&
-						<PlayerPreview
-							avatar={playerOneImage}
-							username={playerOneName}>
-								<button
-									className='reset'
-									onClick={this.handleReset.bind(this, 'playerOne')}>
-										Reset
-								</button>
-						</PlayerPreview>}
-
-					{!playerTwoName &&
-						<PlayerInput
-							id='playerTwo'
-							label='Player Two'
-							onSubmit={this.handleSubmit}
-						/>}
-
-					{playerTwoImage !== null &&
-						<PlayerPreview
-							avatar={playerTwoImage}
-							username={playerTwoName}>
-								<button
-									className='reset'
-									onClick={this.handleReset.bind(this, 'playerTwo')}>
-										Reset
-								</button>
-						</PlayerPreview>}
-				</div>
-
-				{playerOneImage && playerTwoImage &&
-					<Link
-						className='button'
-						to={{
-							pathname: match.url + '/results',
-							search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
-						}}>
-							Battle
-					</Link>}
-			</div>
-		)
-	}
+      <div>
+        <div className='row'>
+          {!this.state.playerOneName &&  // if playerOneName is empty ( === false), then do this
+            <PlayerInput
+            	id='playerOne'
+              label='Player One'
+              onSubmit={this.handleSubmit}
+            />}
+          {playerOneImage !== null &&
+            <PlayerPreview
+              avatar={playerOneImage}
+              username={playerOneName}>
+           <button
+              className='reset'
+              onClick={this.handleReset.bind(this, 'playerOne')}>
+              Reset
+            </button>
+            </PlayerPreview>}
+          {!playerTwoName &&
+            <PlayerInput
+              id='playerTwo'
+              label='Player Two'
+              onSubmit={this.handleSubmit}
+            />}
+          {playerTwoImage !== null &&
+            <PlayerPreview
+              avatar={playerTwoImage}
+              username={playerTwoName}>
+              <button
+                className='reset'
+                onClick={this.handleReset.bind(this, 'playerTwo')}>
+                Reset
+              </button>
+            </PlayerPreview>}
+          {playerOneImage && playerTwoImage &&
+            <Link
+              className='button'
+              to={{
+                pathname: match.url + '/results',
+                search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
+              }}>
+              Battle
+            </Link>}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default connect(null, { emptyBattle })(Battle);

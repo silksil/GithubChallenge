@@ -14,7 +14,7 @@ export default function PlayerPreview(props) {
       </div>
       {props.children}
     </div>
-  )
+  );
 }
 
 PlayerPreview.propTypes = {

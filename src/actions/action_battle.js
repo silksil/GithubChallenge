@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const id = 'cf3bc826a5e853eb88eb';
-const sec = '6fd84f1836638568202eac76e8ac96eb82c7f3d4';
+const id = 'YOUR_CLIENT_ID';
+const sec = 'YOUR_SECRET_ID';
 const params = `?client_id=${id}&client_secret=${sec}`;
 
 export const FETCH_BATTLE = 'fetch_battle';
